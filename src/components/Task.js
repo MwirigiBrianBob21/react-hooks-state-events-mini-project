@@ -1,11 +1,15 @@
 import React from "react";
 
-function Task() {
+
+function Task({task, onHandleClick}) {
+
+
+
   return (
     <div className="task">
-      <div className="label">CATEGORY HERE</div>
-      <div className="text">TEXT HERE</div>
-      <button className="delete">X</button>
+      <div className="label" name="category">{task.category}</div>
+      <div className="text" name="text">{task.text}</div>
+      <button className="delete" onClick={onHandleClick}>X</button>
     </div>
   );
 }
